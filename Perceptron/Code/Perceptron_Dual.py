@@ -67,7 +67,7 @@ time1 = time.time()
 raw_data = pd.read_csv("../Dataset/train_binary.csv", header=0)
 data = raw_data.values
 # 第一列是类别 后784列是特征
-features, labels = data[41300:, 1:], data[41300:, 0]
+features, labels = data[0:, 1:], data[0:, 0]
 train_features, test_features, train_labels, test_labels = train_test_split(
     features, labels, test_size=0.33, random_state=23323)
 
